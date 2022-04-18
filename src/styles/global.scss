@@ -1,0 +1,67 @@
+// First up: config
+@import './config';
+
+// Next: pull in gorko for design tokens
+@import '../node_modules/gorko/gorko.scss';
+
+// Pull in modern reset
+@import './reset';
+
+//Components
+@import './components/site-header';
+@import './components/layout';
+@import './components/post-preview';
+
+// Global CSS starts
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  // background: linear-gradient(0deg, #3700ff, #00d3a5);
+
+  @include apply-utility('weight', 'medium');
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: get-color('primary')
+}
+
+h1 {
+  font-size: get-size('32');
+}
+
+h2,
+h3 {
+  font-size: get-size('24');
+}
+
+a {
+  color: get-color('primary');
+  &:hover, &:focus {
+    color: get-color('secondary');
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+.flow {
+  * + * {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+.post-preview {
+    border: solid 1px get-color('light-shade');
+    padding: 1rem 2rem 4rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    img {
+        width: 100%;
+    }
+}

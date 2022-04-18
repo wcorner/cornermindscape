@@ -1,0 +1,18 @@
+---
+image:
+  file: .gitpod.Dockerfile
+# Commands to start on workspace startup
+tasks:
+  - init: |
+      pnpm install
+      pnpm run build
+    command: |
+      .gitpod/gitpod-setup.sh
+vscode:
+  extensions:
+    - astro-build.astro-vscode
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
+ports:
+  - port: 3000
+    onOpen: open-preview

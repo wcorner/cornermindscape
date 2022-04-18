@@ -1,0 +1,74 @@
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+$gorko-base-size: 1rem;
+
+/**
+  * SIZE SCALE
+  * This is a Major Third scale that powers all the utilities that
+  * it is relevant for (font-size, margin, padding). All items are
+  * calcuated off the base size, so change that and cascade across
+  * your whole project.
+  */
+$gorko-size-scale: (
+  "8": $gorko-base-size * 0.5,
+  "16": $gorko-base-size,
+  "24": $gorko-base-size * 1.5,
+  "32": $gorko-base-size * 2,
+  "64": $gorko-base-size * 4,
+);
+
+/**
+  * COLORS
+  * Colors are shared between backgrounds and text by default. 
+  * You can also use them to power borders, fills or shadows, for example.
+  */
+$gorko-colors: (
+  "primary": #493cbe,
+  "secondary": #5ac2a8,
+  "light": #fafafa,
+  "light-shade": #eeeeee,
+  "grey": #c4c4c4,
+);
+
+/**
+  * CORE CONFIG
+  * This powers everything from utility class generation to breakpoints
+  * to enabling/disabling pre-built components/utilities.
+  */
+$gorko-config: (
+  "bg": (
+    "items": $gorko-colors,
+    "output": "standard",
+    "property": "background",
+  ),
+  "color": (
+    "items": $gorko-colors,
+    "output": "standard",
+    "property": "color",
+  ),
+  "pad": (
+    "items": $gorko-size-scale,
+    "output": "standard",
+    "property": "padding",
+  ),
+  "text": (
+    "items": $gorko-size-scale,
+    "output": "responsive",
+    "property": "font-size",
+  ),
+  "weight": (
+    "items": (
+      "medium": "400",
+      "bold": "800",
+    ),
+    "output": "standard",
+    "property": "font-weight",
+  ),
+  "breakpoints": (
+    "md": "(min-width: 48em)",
+  ),
+);
