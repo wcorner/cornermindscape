@@ -1,11 +1,12 @@
 ---
+setup: |
+  import Layout from '../../layouts/BlogPost.astro'
+  import Cool from '../../components/Author.astro'
 title: 'Inspecting ‘Kafka’s Wound’: Innovation and Interaction in the Web Essay'
 description: "test one"
 publishDate: '23rd September 2015'
 author: 'wcorner'
 heroImage: 'https://cornermindscape.com/wp-content/uploads/kafkas_wound.jpg'
-alt: 'Astro'
-layout: '../../layouts/BlogLayout.astro'
 ---
 
 Reading on the web is associated with a decrease in attention span. As you read this, you are probably thinking about skipping a few paragraphs to see where things will lead. If you can get the gist of an idea by skimming and scanning, or locating the TLDR, that’s maybe all you need. Why not just read the conclusion to swipe the key points and takeaways before attending to the numerous browser tabs or other devices dividing and competing for your attention? What do you gain from focusing entirely, and for a sustained period of time on one passage of text? What if that text also opens out into other content, demanding even more of your attention?
